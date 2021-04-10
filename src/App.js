@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Canvas from "./Canvas";
+import NAryTree from "./NAryTree";
 
 function App() {
+  const draw = (ctx, frameCount) => {
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    ctx.fillStyle = "#000000";
+    ctx.beginPath();
+    ctx.arc(80, 100, 20 * Math.sin(frameCount * 0.05) ** 2, 0, 2 * Math.PI);
+    ctx.fill();
+  };
+
+  let myTree = new NAryTree();
+  myTree.buildTree("A;B;E;/F;K;///C;/D;G;/H;/I;/J;///");
+/*   let ser = myTree.serialize();
+  myTree.buildTree(ser); */
+  let leafsCount = myTree.getLeafsCount();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Canvas draw={draw}></Canvas>
     </div>
   );
 }

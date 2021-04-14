@@ -1,5 +1,7 @@
 import Canvas from "./Canvas";
 import NAryTree from "./NAryTree";
+import {N_Ary_Tree,Node} from "./N_Ary_Tree";
+
 
 function App() {
   const draw = (ctx, frameCount) => {
@@ -10,16 +12,46 @@ function App() {
     ctx.fill();
   };
 
-  let myTree = new NAryTree();
-  myTree.buildTree("A;B;E;/F;K;///C;/D;G;/H;/I;/J;///");
-/*   let ser = myTree.serialize();
-  myTree.buildTree(ser); */
-  let leafsCount = myTree.getLeafsCount();
+  let myTree = new N_Ary_Tree();
+ /*  myTree.deserialize("A;B;E;/;F;K;/;/;/;C;/;D;G;/;H;/;I;/;J;/;/;/;");              
+  let data = myTree.serialize();
+  myTree.deserialize(data);
+  let data2 = myTree.serialize();
+ */
+ let temp =  new Node("A");
+  myTree.root =temp;
+  myTree.root.children[0] = new Node("B");
+  myTree.root.children[1] = new Node("D");
+  myTree.root.children[2] = new Node("H");
+
+
+  myTree.root.children[0].children[0] = new Node("C");
+  myTree.root.children[1].children[0] = new Node("E");
+  myTree.root.children[2].children[0] = new Node("I");
+  myTree.root.children[2].children[1] = new Node("J");
+
+  myTree.root.children[1].children[0].children[0] = new Node("F");
+  myTree.root.children[1].children[0].children[1] = new Node("G");
+
+  let data = myTree.serialize();
+  myTree.deserialize(data);
+  let data2 = myTree.serialize();
+ 
+
+  let countLeaf = myTree.getLeafsCount();
+  let countDeep = myTree.getTreeHeight();
   return (
     <div className="App">
       <Canvas draw={draw}></Canvas>
     </div>
   );
 }
+function basura(){
+  /* myTree.buildTree("A;B;E;/F;K;///C;/D;G;/H;/I;/J;///"); */
 
+  //let ser = myTree.serialize();
+  /* myTree.buildTree(ser); */
+ /*  let leafsCount = myTree.getLeafsCount();
+  let heightTree = myTree.getTreeHeight(); */
+}
 export default App;

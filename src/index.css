@@ -16,3 +16,15 @@ code {
   width: 100vw;
   height: 100vh;
 }
+.viewport-canvas{
+  height: 80%;
+  max-height: 80%;
+  width: 100%;
+  overflow: scroll;
+  margin: 0 auto;
+}
+canvas{
+  height: 3000px;
+  width: 3000px;
+  background-color:  rgb(114, 173, 155);
+}

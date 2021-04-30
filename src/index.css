@@ -17,14 +17,14 @@ code {
   height: 100vh;
 }
 .viewport-canvas{
-  height: 80%;
-  max-height: 80%;
+  height: 95%;
+  max-height: 95%;
   width: 100%;
   overflow: scroll;
   margin: 0 auto;
 }
 canvas{
-  height: 3000px;
-  width: 3000px;
+  height: 6000px;
+  width: 6000px;
   background-color:  rgb(114, 173, 155);
 }

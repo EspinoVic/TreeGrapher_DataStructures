@@ -12,12 +12,16 @@ function App() {
   }; */
 
   let myTree = new N_Ary_Tree();
- /*  myTree.deserialize("A;B;E;/;F;K;/;/;/;C;/;D;G;/;H;/;I;/;J;/;/;/;");              
+ /*  myTree.deserialize(`
+
+  `);   */            
+  /* myTree.deserialize("A;B;E;/;F;K;/;/;/;C;/;D;G;/;H;/;I;/;J;/;/;/;");              
   let data = myTree.serialize();
   myTree.deserialize(data);
-  let data2 = myTree.serialize();
- */
-  let temp =  new Node("A");
+  let data2 = myTree.serialize(); */
+
+
+ let temp =  new Node("A");
   myTree.root =temp;
   myTree.root.children[0] = new Node("B");
   myTree.root.children[1] = new Node("D");
@@ -30,8 +34,8 @@ function App() {
   myTree.root.children[2].children[1] = new Node("J");
 
   myTree.root.children[1].children[0].children[0] = new Node("F");
-  myTree.root.children[1].children[0].children[1] = new Node("G");
-
+  myTree.root.children[1].children[0].children[1] = new Node("G"); 
+ 
 /*   let data = myTree.serialize();
   myTree.deserialize(data);
   let data2 = myTree.serialize();

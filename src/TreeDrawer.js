@@ -45,6 +45,8 @@ export default class TreeDrawer{
         }
     } */
 
+
+    
     drawNode(textToWrite,ctx){
 
         /* Draw Cicle node indicator- */

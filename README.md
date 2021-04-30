@@ -4,7 +4,7 @@ _This app will graph any N-ary tree the user need._
 ## Features
 
 * Serialize a tree given by code.
-* Deserialize a tree given a striny by code.
+* Deserialize a tree given a string by code.
 * Shows the tree builded.
 
 ## Future change

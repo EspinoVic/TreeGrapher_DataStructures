@@ -8,7 +8,7 @@ _This app will graph any N-ary tree the user need._
 * Shows the tree builded.
 
 ## Future change
-* Implements guidelines between sibling nodes, for a better visual experience.
+* Implements guide lines between sibling nodes, for a better visual experience.
 * Allow the user to write or paste the tree serialized in order to graph it.
 
 
